@@ -1,4 +1,6 @@
-# Bubble Sort: the largest emelent in the list will "bubble up" towards its correct position at the end. Worst and average case time complexity is O(n^2) since it contains nested for-loops; best case (when already sorted) is O(n). Overall, it is a simple but slow algorithm.
+"""
+Bubble Sort: the largest emelent in the list will "bubble up" towards its correct position at the end. Worst and average case time complexity is O(n^2) since it contains nested for-loops; best case (when already sorted) is O(n). Overall, it is a simple but slow algorithm.
+"""
 def bubble_sort(array):
     length = len(array)
     
@@ -22,9 +24,11 @@ input = [8, 2, 6, 4, 5]
 output = bubble_sort(input)
 print(output)
 
-# Insertion Sort: Builds the sorted array one element at a time by comparing each with the rest of the elements and isnerting into its correct position.
-# Runtime complexity is O(n^2) for average case and worst case. Best case (when its already sorted) is O(n).
-# Considered more efficient that bubble sort.
+"""
+Insertion Sort: Builds the sorted array one element at a time by comparing each with the rest of the elements and isnerting into its correct position.
+Runtime complexity is O(n^2) for average case and worst case. Best case (when its already sorted) is O(n).
+Considered more efficient that bubble sort.
+"""
 def insetion_sort(array):
     for index in range(1, len(array)):
         key = array[index]
@@ -40,8 +44,10 @@ def insetion_sort(array):
 
 print(insetion_sort(input))
 
-# Merge Sort: merge() is called for each half, and has linear runtime complexity O(n) by looking at each element at most once. Then, merge_sort(0 splits input array recursively and calls merge for each half; halved until a single element remains, the number of halving operations performed is log_2(n). Thus, the total runtime is O(nlog_2(n)) for worst-case.
-# It is a very efficient algorithm that scale well as the size of the input array grows. But for small arrays, bubble sort and insertion sort are faster.
+"""
+Merge Sort: merge() is called for each half, and has linear runtime complexity O(n) by looking at each element at most once. Then, merge_sort(0 splits input array recursively and calls merge for each half; halved until a single element remains, the number of halving operations performed is log_2(n). Thus, the total runtime is O(nlog_2(n)) for worst-case.
+It is a very efficient algorithm that scale well as the size of the input array grows. But for small arrays, bubble sort and insertion sort are faster.
+"""
 # helper function
 def merge(left, right):
     if len(left) == 0:
@@ -78,7 +84,9 @@ def merge_sort(array):
 
 print(merge_sort(input))
 
-# Quicksort: the input array is partitioned in linear time O(n), and this repeats recursively for an average of log_2(n) times. Hence the final time complexity is O(nlog_2(n)). Theoretically, the worst-case scenario is O(n^2), and there is no guarantee it will achieve the average runtime complexity. Further, it trades off memory space for speed.
+"""
+Quicksort: the input array is partitioned in linear time O(n), and this repeats recursively for an average of log_2(n) times. Hence the final time complexity is O(nlog_2(n)). Theoretically, the worst-case scenario is O(n^2), and there is no guarantee it will achieve the average runtime complexity. Further, it trades off memory space for speed.
+"""
 from random import randint
 
 def quicksort(array):
@@ -98,11 +106,13 @@ def quicksort(array):
 
 print(quicksort(input))
 
-# Timsort: a combination of insertion sort and merge sort.
-# On average, runtime complexity is of O(nlog_2(n)) just like merge sort and quicksort. The log comes from doubling down the size of the run to perform each linear merge.
-# Best case scenario is O(n), better than merge sort and matches quicksort's best-case.
-# For worst-case, it is O(nlog_2(n)) which surpases quicksort's O(n^2).
-# Timsort performs O(nlog_2(n)) regardless of structure of the input array. Unlike quicksort which can run O(n^2). timsort is also very fast for small arrays since it turns into insertion sort.
+"""
+Timsort: a combination of insertion sort and merge sort.
+On average, runtime complexity is of O(nlog_2(n)) just like merge sort and quicksort. The log comes from doubling down the size of the run to perform each linear merge.
+Best case scenario is O(n), better than merge sort and matches quicksort's best-case.
+For worst-case, it is O(nlog_2(n)) which surpases quicksort's O(n^2).
+Timsort performs O(nlog_2(n)) regardless of structure of the input array. Unlike quicksort which can run O(n^2). timsort is also very fast for small arrays since it turns into insertion sort.
+"""
 def timsort_insertion(array, left=0, right=None):
     if right is None:
         right = len(array)-1
@@ -185,8 +195,10 @@ def heap_sort(array):
 
 print(heap_sort(input))
 
-# Tree Sort: Worst case time complexity is O(nlog(n)) using balanced binary search tree; O(n^2) using unbalanced binary search tree. Average and best time complexity is O(nlog(n)).
-# Worst case space complexity: O(n)
+"""
+Tree Sort: Worst case time complexity is O(nlog(n)) using balanced binary search tree; O(n^2) using unbalanced binary search tree. Average and best time complexity is O(nlog(n)).
+Worst case space complexity: O(n)
+"""
 class Node:
     def __init__(self, val):
         self.left_child = None

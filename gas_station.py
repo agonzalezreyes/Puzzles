@@ -1,18 +1,20 @@
-# Gas Station
-# There are N gas stations along a circular route, where the amount of gas at station i is A[i].
-# You have a car with an unlimited gas tank and it costs B[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations.
-# Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.
+"""
+Gas Station
+There are N gas stations along a circular route, where the amount of gas at station i is A[i].
+You have a car with an unlimited gas tank and it costs B[i] of gas to travel from station i to its next station (i+1). You begin the journey with an empty tank at one of the gas stations.
+Return the starting gas station’s index if you can travel around the circuit once in the clockwise direction, otherwise return -1.
 
-# Example 1:
-# A = [1, 2, 3, 4, 5]
-# B = [3, 4, 5, 1, 2]
-# For i = 4: A[3] = 4 and B[4] = 1; need
-# So, to go to index = 5, A[3] > B[3] => 4 > 1. So, A[3] - B[3] = 4 - 1 = 3, so it does work and we would have 3 units of gas extra.
+Example 1:
+A = [1, 2, 3, 4, 5]
+B = [3, 4, 5, 1, 2]
+For i = 4: A[3] = 4 and B[4] = 1; need
+So, to go to index = 5, A[3] > B[3] => 4 > 1. So, A[3] - B[3] = 4 - 1 = 3, so it does work and we would have 3 units of gas extra.
 
-# Example 2:
-# A = [1, 2]
-# B = [2, 1]
-# For i = 0, A[0] = 1 and B[0] = 2. So B[0] > A[0], A[0] - B[0] = -1. Does not work.
+Example 2:
+A = [1, 2]
+B = [2, 1]
+For i = 0, A[0] = 1 and B[0] = 2. So B[0] > A[0], A[0] - B[0] = -1. Does not work.
+"""
 
 def canCompleteCircuit(A, B):
     if (len(A) == 0):
