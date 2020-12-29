@@ -1,3 +1,6 @@
+"""
+Singly Linked List
+"""
 class ListNode(object):
     def __init__(self, data=None, next_node=None):
         self.data = data
@@ -39,7 +42,7 @@ def printList(list):
             content += "->"
     print(content)
 
-class LinkedList(object):
+class SinglyLinkedList(object):
     def __init__(self, head=None):
         self.head = head
 

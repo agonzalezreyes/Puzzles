@@ -16,7 +16,8 @@
 13. [Regular Expressions](#thirteenth)
 14. [Lambda Functions](#fourteenth)
 
-#### args and kwargs <a name="first"></a>
+---
+### args and kwargs <a name="first"></a>
 - In a function declaration `*` means put the rest of the positional arguments into a tuple named  `<name> `, while  `**` is the same for keyword arguments but with a dictionary. 
 - In a function call `*` means unpacking the tuple or list named `<name>` to positional arguments at this position, while `**` is the same for keyword arguments.
 For instance:
@@ -50,7 +51,7 @@ nombre: manzana
 color: roja
 ```
 ---
-##### String Indexing and Slicing <a name="second"></a>
+### String Indexing and Slicing <a name="second"></a>
 Replace character at `position` in string:
 ```python
 string = string[:position] + character + string[position+1:]
@@ -125,7 +126,7 @@ False
 '    Hello World'
 ```
 ---
-##### Loops <a name="third"></a>
+### Loops <a name="third"></a>
 ```python
 >>> for i in range(start=0, stop=10, step=2):
 >>>    print(i)
@@ -197,7 +198,7 @@ for color, ratio in zip(chroma, ratios):
     print("{}% {}".format(ratio * 100, color))
 ```
 ---
-##### Exception Handling <a name="fourth"></a>
+### Exception Handling <a name="fourth"></a>
 The `finally` section will always be executed, whetheer the expection was raised or not:
 ```python
 def spam(divideBy):
@@ -209,7 +210,7 @@ def spam(divideBy):
 >>>         print("-- division finished --")
 ```
 ---
-##### in and not <a name="fifth"></a>
+### in and not <a name="fifth"></a>
 ```python
 >>> 'hola' in ['hello', 'hi', 'hola']
 True
@@ -238,7 +239,7 @@ False
 True
 ```
 ---
-##### Multiple assignments <a name="sixth"></a>
+### Multiple assignments <a name="sixth"></a>
 Instead of this:
 ```python
 >>> characteristics = ['yuge', 'green']
@@ -260,7 +261,7 @@ Swaping values:
 'AAA'
 ```
 ---
-##### Augmented Assignment Operators <a name="seventh"></a>
+### Augmented Assignment Operators <a name="seventh"></a>
 ```python
 >>> s = 'Hello'
 >>> s += ' world!'
@@ -273,7 +274,7 @@ Swaping values:
 ['Zoo', 'Zoo', 'Zoo']
 ```
 ---
-#### Lists <a name="eighth"></a>
+### Lists <a name="eighth"></a>
 Slicing lists
 ```python
 >>> A = ['a', 'b', 'c', 'd']
@@ -370,7 +371,7 @@ Getting Index from List Item:
 ['a', 'b', 'c']
 ```
 ---
-#### Tuples <a name="ninth"></a>
+### Tuples <a name="ninth"></a>
 ```python
 >>> trio = ('hola', 10, 'adios')
 >>> print(trio[0])
@@ -394,7 +395,7 @@ Getting Index from List Item:
 ['h', 'o', 'l', 'a']
 ```
 ---
-#### Dictionaries <a name="tenth"></a>
+### Dictionaries <a name="tenth"></a>
 ```python
 myDoggo = {'name': 'Speedy Gonzalez', 'size': 'fit', 'color': 'tri', 'age': 3}
 
@@ -447,7 +448,7 @@ if 'color' not in spam:
 {'color': 'tri', 'name': 'Spunky', 'age': 0.2}
 ```
 ---
-##### Sets <a name="eleventh"></a> 
+### Sets <a name="eleventh"></a> 
 Can be done in two ways:
 ```python
 >>> s2 = set([1, 2, 3])
@@ -503,6 +504,8 @@ KeyError: 3
 >>> s.discard(3)
 >>>
 ```
+`clear()`: clear contents of the set
+
 `union()` or `|`
 ```python
 >>> s1 = {1, 2, 3}
@@ -535,7 +538,7 @@ KeyError: 3
 {1, 4}
 ```
 ---
-##### Comprehensions <a name="twelfth"></a> 
+### Comprehensions <a name="twelfth"></a> 
 ```python
 # list
 >>> a = [1, 3, 6]
@@ -554,7 +557,7 @@ KeyError: 3
 {'Speedy': 'name', 3: 'age'}
 ```
 ---
-##### Regular Expressions with `import re` <a name="thirteenth"></a> 
+### Regular Expressions with `import re` <a name="thirteenth"></a> 
 ```python
 >>> phone_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 
@@ -590,7 +593,7 @@ Phone number found: 111-222-4444
 ['111-222-4444', '222-333-5555']
 ```
 ---
-##### Lambda Functions <a name="fourteenth"></a> 
+###  Lambda Functions <a name="fourteenth"></a> 
 Consider the following:
 ```python
 >>> def add(x, y):

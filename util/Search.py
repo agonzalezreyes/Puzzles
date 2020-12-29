@@ -1,4 +1,6 @@
-# Recursive Binary Search
+"""
+Recursive Binary Search
+"""
 def binary_search(array, element, start=0, end=0):
     if start > end:
         return -1
@@ -13,7 +15,9 @@ def binary_search(array, element, start=0, end=0):
     else:
         return binary_search(array, element, middle+1, end)
 
-# Iterative Binary Search
+"""
+Iterative Binary Search
+"""
 def binary_search_iter(array, element):
     lhs = 0
     rhs = len(array)-1
@@ -29,23 +33,14 @@ def binary_search_iter(array, element):
             if array[middle] == element:
                 return middle
     return None
-
-# Regular Linear Search
+    
+"""
+Regular Linear Search
+"""
 def linear_search(array, target):
     for i, val in enumerate(array):
         if val == target:
             return i
     return -1
 
-arr = [23, 4, 5, 8, 19, 1]
-elem = 5
-
-res = linear_search(arr, elem)
-print(res)
-
-res = binary_search(arr, elem, 0, len(arr))
-print(res)
-
-res = binary_search_iter(arr, elem)
-print(res)
 

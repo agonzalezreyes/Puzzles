@@ -28,7 +28,7 @@ Constraints:
 #         self.data = data
 #         self.next_node = next_node
 
-from util.LinkedList import ListNode, makeList, printList, get_array
+from util.SinglyLinkedList import ListNode, makeList, printList, get_array
 
 def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
     head = None
