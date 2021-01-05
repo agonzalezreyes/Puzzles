@@ -1,6 +1,7 @@
 """
 Deque: A Double Ended Queue - insertion and deletion at both ends of the queue.
-
+Time complexity:
+O(1) for insert and remove
 """
 
 class Deque(object):
