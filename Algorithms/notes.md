@@ -44,3 +44,9 @@
 - [x] Regular Linear Search
 - [x] Recursive Binary Search
 - [x] Iterative Binary Search
+
+### Analysis 
+| Name      | Best | Average | Worst | Space/Memory |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| ** Linear Search ** | 1 | n/2 | n | 1 | 
+| ** Binary Search ** | 1 | logn | logn | 1 | 

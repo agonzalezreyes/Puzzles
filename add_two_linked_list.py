@@ -28,7 +28,7 @@ Constraints:
 #         self.data = data
 #         self.next_node = next_node
 
-from util.SinglyLinkedList import ListNode, makeList, printList, get_array
+from DataStructures.SinglyLinkedList import ListNode, makeList, printList, get_array
 
 def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
     head = None
@@ -40,8 +40,8 @@ def addTwoNumbers(l1: ListNode, l2: ListNode) -> ListNode:
         data2 = 0 if l2 is None else l2.data
 
         sum = data1 + data2 + carry
-        new_node = ListNode(data=sum % 10)
-        carry = sum // 10
+        new_node = ListNode(data=sum % 10) # where data is the remainder of sum / 10
+        carry = sum // 10 # where carry is the integer when sum is divided by 10
 
         # if first node
         if curr is None:

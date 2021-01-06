@@ -21,7 +21,7 @@ OPTION 1: Sort the array and use binary search.
 Time complexity is O(n log n) because it takes O(n log n) time to sort the array using sort() and the cost of n binary searches is O(n log n).
 The space compolexity depends on the sorting algorithm -- O(log n) for quicksort, and O(1) for heapsort.
 """
-from util.Search import binary_search
+from Algorithms.Search import binary_search
 
 def sumsToTarget_BS(nums, target):
     sorted = nums.copy()
